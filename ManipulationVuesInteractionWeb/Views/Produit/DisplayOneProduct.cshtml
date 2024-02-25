@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "DisplayOneProduct";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>produit</h2>
+
+    <p>ID: @Model.id</p>
+    <p>Name: @Model.name</p>
+
+
+
+
+    <table class="table table-bordered table-hover" style="margin-top:100px">
+        <tr>
+            <td>Product ID</td>
+            <td>@Model.id</td>
+        </tr>
+        <tr>
+            <td>Product Name</td>
+            <td>@Model.name</td>
+        </tr>
+        <tr>
+            <td>Product Price</td>
+            <td>@Model.prix</td>
+        </tr>
+    </table>
+
+</body>
+</html>
+

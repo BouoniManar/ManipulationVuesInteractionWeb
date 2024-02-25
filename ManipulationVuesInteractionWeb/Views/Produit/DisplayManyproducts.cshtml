@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "DisplayManyproducts";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    List<ManipulationVuesInteractionWeb.Models.Produit> produits = ViewData["Produits"] as List<ManipulationVuesInteractionWeb.Models.Produit>;
+
+}
+
+<h2>Liste des produits</h2>
+
+@foreach (var produit in produits)
+{
+    <p>ID : @produit.id</p>
+    <p>Nom : @produit.name</p>
+    <p>Prix : @produit.prix</p>
+}
+
+<table class="table table-bordered table-hover" style="margin-top:100px">
+    <thead>
+        <tr>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Product Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var produit in ViewData["Produits"] as List<ManipulationVuesInteractionWeb.Models.Produit>)
+        {
+            <tr>
+                <td>@produit.id</td>
+                <td>@produit.name</td>
+                <td>@produit.prix</td>
+            </tr>
+        }
+    </tbody>
+</table>
